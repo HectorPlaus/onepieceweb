@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>One Piece World</title>
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <header class="header">
+    
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Busca un personaje..." />
+      <button id="searchBtn">Buscar</button>
+      <button id="gamesBtn"></button>
+      
+      <!--<button id="randomCharacterBtn">Personaje Aleatorio</button>-->
+    </div>
+  </header>
+
+  <main>
+    <div id="characterContainer" class="character-grid"></div>
+  </main>
+
+  <template id="characterCardTemplate">
+    <div class="character-card">
+      <img class="character-img" onerror="this.style.display='none';"/>
+      <div class="card-content">
+        <h2 class="character-name"></h2>
+        <p class="character-bounty"></p>
+        <p class="character-job"></p>
+        <p class="character-fruit"></p>
+        <p class="character-crew"></p>
+        <p class="character-age"></p>
+        <p class="character-size"></p>
+        <p class="character-state"></p>
+        <p class="character-gender"></p>
+        <p class="character-haki"></p>
+        <p class="character-nickname"></p>
+        <p class="character-origin"></p>
+        <p class="character-firstappearance"></p>
+
+
+      </div>
+    </div>
+  </template>
+
+  <script type="module" src="scripts/app.js"></script>
+</body>
+</html>

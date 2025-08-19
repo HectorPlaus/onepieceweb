@@ -1,0 +1,4 @@
+.screen { display: none; padding: 20px; }
+.screen.hidden { display: none; }
+.screen:not(.hidden) { display: block; }
+nav { margin-bottom: 20px; }
