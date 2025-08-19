@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     gamesBtn.addEventListener('click', () => {
-        window.location.href = 'gamesMenu.html'; 
+        window.location.href = 'pages/gamesMenu.html'; 
     });
 
   function enrichCharacter(character) {
