@@ -1,33 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Select Mode</title>
-    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/gamesMenu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
-<body>
-    <header class="header">
-        <div class="header-content">
-            <h1>One Piece World</h1>
-            <button id="backBtn" class="back-button"><i class="fas fa-arrow-left"></i> Volver</button>
-        </div>
-  </header>
-    
 
-    <div id="mode-screen">
-        <h1>Modo de Juego</h1>
-        <p id="category-name"></p>
-        <div id = "mode-buttons">
-            <button id="classic-mode">Personaje</button>
-            <button id="fruit-mode">Fruta</button>
-            
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+            </div>
+        </header>
+        <div id="menu">
+            <div class="buttons-container">
+                <div class="button-game" id="classic-mode"><img src="../assets/img/ButtonClassic.webp" width="100%"
+                        class="button-img">
+                    <div class="button-title"> Clásico </div>
+                    <div class="button-description"> Consigue pistas con cada intento </div>
+                </div>
+                <div class="button-game" id="fruit-mode"><img src="../assets/img/ButtonDevil.webp" width="100%"
+                        class="button-img">
+                    <div class="button-title"> Fruta del diablo </div>
+                    <div class="button-description"> Adivina con un nombre </div>
+                </div>
+            </div>
         </div>
-        
     </div>
+
+
 
     <script src="../scripts/gamesMenu.js"></script>
 </body>
+
 </html>

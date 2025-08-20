@@ -1,11 +1,15 @@
 /* styles/main.css */
 
 body {
-  
+
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #f2f2f2;
   color: #333;
+  background-image: url('../assets/img/hachinosu-one-piece.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .header {
@@ -14,6 +18,8 @@ body {
   color: rgb(0, 0, 0);
   padding: 1rem;
   text-align: center;
+  height: 90px;
+  width: 100%;
 }
 
 .title {
@@ -54,7 +60,7 @@ body {
 }
 
 .character-grid {
-  
+
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
@@ -110,4 +116,97 @@ body {
 
 .characterCardTemplate {
   display: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+input {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+  color: #000000;
+  font-size: 20px;
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+label {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+  color: var(--h-text);
+  ;
+  font-size: 20px;
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+/* General styles for the navbar */
+.navbar {
+  display: flex;
+  /* Flexbox para organizar los elementos */
+  align-items: center;
+  /* Centrar verticalmente los elementos */
+  justify-content: center;
+  /* Centra los <li> */
+  list-style: none;
+  /* Sin puntos de lista */
+  padding: 0;
+  margin: 0;
+  background-color: #1B2626;
+  padding-right: 5px;
+  border: 1px solid transparent;
+  border-color: #0d1313;
+}
+
+/* Estilo para el menú de <li> */
+.menu {
+  display: flex;
+  /* Para mantener los <li> alineados horizontalmente */
+  gap: 20px;
+  /* Espacio entre los elementos */
+  flex-grow: 1;
+  /* Este bloque ocupará todo el espacio disponible */
+  justify-content: center;
+  /* Centra el grupo de <li> */
+  font-size: 20px;
+}
+
+.navbar li a {
+  color: #6CD591;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar li a:hover {
+  background-color: #2d3f3f;
+}
+
+
+p {
+  text-align: center;
+  color: var(--p-text);
+}
+
+
+
+#toggle-theme {
+  margin-left: auto;
+  /* Mueve el botón al final */
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  color: #f0f0f0;
+  background-color: #ffffff00;
+}
+
+#toggle-theme :hover {
+  color: #000000;
 }

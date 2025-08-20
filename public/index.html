@@ -1,20 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>One Piece World</title>
   <link rel="stylesheet" href="styles/main.css" />
 </head>
+
 <body>
   <header class="header">
-    
+
     <div class="search-bar">
-      <input type="text" id="searchInput" placeholder="Busca un personaje..." />
+      <input type="text" id="searchInput" placeholder="Busca por nombre..." />
+      <select id="jobFilter">
+        <option value="">Todos los roles</option>
+        <option value="Captain">Capitán</option>
+        <option value="Navigator">Navegante</option>
+        <option value="Cook">Cocinero</option>
+      </select>
+
+      <select id="crewFilter">
+        <option value="">Todas las tripulaciones</option>
+        <option value="Sombreo de Paja">Sombrero de Paja</option>
+        <option value="Le Roux crew">Los Piratas del Pelirojo</option>
+      </select>
+
       <button id="searchBtn">Buscar</button>
       <button id="gamesBtn"></button>
-      
-      <!--<button id="randomCharacterBtn">Personaje Aleatorio</button>-->
+
     </div>
   </header>
 
@@ -24,7 +38,7 @@
 
   <template id="characterCardTemplate">
     <div class="character-card">
-      <img class="character-img" onerror="this.style.display='none';"/>
+      <img class="character-img" onerror="this.style.display='none';" />
       <div class="card-content">
         <h2 class="character-name"></h2>
         <p class="character-bounty"></p>
@@ -47,4 +61,5 @@
 
   <script type="module" src="scripts/app.js"></script>
 </body>
+
 </html>
