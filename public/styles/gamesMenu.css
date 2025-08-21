@@ -155,7 +155,7 @@ button {
     display: flex;
     grid-template-columns: repeat(6, 1fr);
     align-items: center;
-    gap: 66px;
+    gap: 64px;
     row-gap: 10px;
 }
 
@@ -217,4 +217,87 @@ button {
     border-radius: 6px;
     border: 2px solid #000;
     object-fit: cover;
+}
+
+/* 📱 Ajustes responsivos */
+@media (max-width: 768px) {
+  input,
+  .autocomplete {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .autocomplete-items div img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .button-game {
+    width: 80%;
+    max-width: none;
+  }
+
+  .button-title {
+    font-size: 18px;
+    left: 80px;
+    top: 20px;
+  }
+
+  .button-description {
+    font-size: 12px;
+    left: 80px;
+    bottom: 20px;
+  }
+
+  .grid {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .headers-grid {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .card {
+    width: 90px;
+    font-size: 14px;
+  }
+
+  .guessed-img {
+    width: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  input,
+  .autocomplete {
+    width: 95%;
+    max-width: 300px;
+  }
+
+  .autocomplete-items div img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .button-title {
+    font-size: 16px;
+    left: 70px;
+  }
+
+  .button-description {
+    font-size: 11px;
+    left: 70px;
+  }
+
+  .card {
+    width: 70px;
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .guessed-img {
+    width: 50px;
+  }
 }
