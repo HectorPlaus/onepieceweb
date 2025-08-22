@@ -7,16 +7,18 @@
   <title>One Piece Classic</title>
   <link rel="stylesheet" href="../styles/gamesMenu.css">
   <script type="module" src="../scripts/classicGame.js" defer></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
   <header class="header"></header>
   <div class="container">
+    <div id = "info"></div>
     <div class="game-container">
       <div class="autocomplete">
         <input type="text" id="guessInput" placeholder="Escribe un personaje...">
       </div>
-      <button id="guessBtn">Probar</button>
+      <button id="guessBtn"><i class="material-icons">double_arrow</i></button>
       
       <div id="result"></div>
       <div id="feedback"></div>

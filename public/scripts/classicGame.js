@@ -9,8 +9,13 @@ console.log("DEBUG: a adivinar =>", targetCharacter.name);
 const input = document.getElementById("guessInput");
 const guessBtn = document.getElementById("guessBtn");
 const result = document.getElementById("result");
+const info = document.getElementById("info");
 
 document.addEventListener("DOMContentLoaded", () => {
+
+  info.innerText = `¡ADIVINA EL PERSONAJE DE ONE PIECE! ¡${characters.length}!`;
+
+
 
   function autocomplete(inp, arr) {
     let currentFocus;
@@ -141,8 +146,8 @@ if (!document.querySelector(".headers-grid")) {
       </div>`);
 
   // Recompensa
-  let bountyGuess = parseInt(guessedCharacter.bounty2.replace(/\D/g, ""));
-let bountyTarget = parseInt(targetCharacter.bounty2.replace(/\D/g, ""));
+  let bountyGuess = parseInt(guessedCharacter.bounty.replace(/\D/g, ""));
+let bountyTarget = parseInt(targetCharacter.bounty.replace(/\D/g, ""));
 
 let bountyClass = guessedCharacter.name === targetCharacter.name 
   ? "success" 
@@ -155,7 +160,7 @@ if (bountyGuess > bountyTarget) {
 }
 hints.push(`
   <div class="card ${bountyClass} ${bountyHint}">
-    ${guessedCharacter.bounty2 || "Desconocida"}
+    ${guessedCharacter.bounty || "Desconocida"}
   </div>
 `);
 
