@@ -1,7 +1,6 @@
 /* styles/main.css */
 
 body {
-
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #f2f2f2;
@@ -12,13 +11,15 @@ body {
   background-position: center;
 }
 
+/* HEADER */
 .header {
   background-image: url('https://artworks.thetvdb.com/banners/graphical/81797-g3.jpg');
   background-color: #e60012;
   color: rgb(0, 0, 0);
   padding: 1rem;
   text-align: center;
-  height: 90px;
+  height: auto;
+  min-height: 90px;
   width: 100%;
 }
 
@@ -28,12 +29,14 @@ body {
   letter-spacing: 2px;
 }
 
+/* SEARCH BAR */
 .search-bar {
   margin-top: 1rem;
   display: flex;
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .search-bar input {
@@ -42,6 +45,7 @@ body {
   border-radius: 5px;
   width: 250px;
   font-size: 1rem;
+  max-width: 100%;
 }
 
 .search-bar button {
@@ -59,15 +63,16 @@ body {
   background-color: #ffe95f;
 }
 
+/* GRID */
 .character-grid {
-
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.5rem;
   padding: 2rem;
   justify-items: center;
 }
 
+/* CARD */
 .character-card {
   display: flex;
   flex-direction: column;
@@ -81,6 +86,8 @@ body {
   padding: 15px;
   font-size: large;
   font-weight: bold;
+  width: 100%;
+  max-width: 350px;
 }
 
 .character-card:hover {
@@ -89,6 +96,7 @@ body {
 
 .character-img {
   max-width: 100%;
+  height: auto;
   object-fit: cover;
   border: 2px solid #3d2808;
   border-radius: 10px;
@@ -113,7 +121,6 @@ body {
 .character-nickname,
 .character-origin,
 .character-firstappearance {
-
   font-size: 1rem;
   margin: 0.25rem 1rem;
   text-align: center;
@@ -123,13 +130,14 @@ body {
   display: none;
 }
 
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
+/* FORM ELEMENTS */
 input {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
   color: #000000;
@@ -140,9 +148,8 @@ input {
 }
 
 label {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+  font-family: inherit;
   color: var(--h-text);
-  ;
   font-size: 20px;
   margin-top: 5px;
   padding: 10px;
@@ -150,35 +157,26 @@ label {
   font-weight: bold;
 }
 
-/* General styles for the navbar */
+/* NAVBAR */
 .navbar {
   display: flex;
-  /* Flexbox para organizar los elementos */
   align-items: center;
-  /* Centrar verticalmente los elementos */
   justify-content: center;
-  /* Centra los <li> */
   list-style: none;
-  /* Sin puntos de lista */
-  padding: 0;
   margin: 0;
   background-color: #1B2626;
-  padding-right: 5px;
-  border: 1px solid transparent;
-  border-color: #0d1313;
+  padding: 10px;
+  border: 1px solid #0d1313;
+  flex-wrap: wrap;
 }
 
-/* Estilo para el menú de <li> */
 .menu {
   display: flex;
-  /* Para mantener los <li> alineados horizontalmente */
   gap: 20px;
-  /* Espacio entre los elementos */
   flex-grow: 1;
-  /* Este bloque ocupará todo el espacio disponible */
   justify-content: center;
-  /* Centra el grupo de <li> */
   font-size: 20px;
+  flex-wrap: wrap;
 }
 
 .navbar li a {
@@ -193,17 +191,15 @@ label {
   background-color: #2d3f3f;
 }
 
-
+/* TEXTS */
 p {
   text-align: center;
   color: var(--p-text);
 }
 
-
-
+/* THEME TOGGLE */
 #toggle-theme {
   margin-left: auto;
-  /* Mueve el botón al final */
   border: none;
   border-radius: 50px;
   cursor: pointer;
@@ -212,6 +208,64 @@ p {
   background-color: #ffffff00;
 }
 
-#toggle-theme :hover {
+#toggle-theme:hover {
   color: #000000;
+}
+
+/* 📱 RESPONSIVE BREAKPOINTS */
+@media (max-width: 1024px) {
+  .title {
+    font-size: 2rem;
+  }
+  .character-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.8rem;
+  }
+  .menu {
+    font-size: 18px;
+    gap: 15px;
+  }
+  .character-card {
+    font-size: medium;
+    padding: 10px;
+  }
+  .character-name {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 0.5rem;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+  .search-bar {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .search-bar input,
+  .search-bar button {
+    width: 100%;
+    max-width: 100%;
+  }
+  .menu {
+    flex-direction: column;
+    gap: 10px;
+    font-size: 16px;
+  }
+  .character-card {
+    font-size: small;
+    padding: 8px;
+  }
+  .character-name {
+    font-size: 1rem;
+  }
 }

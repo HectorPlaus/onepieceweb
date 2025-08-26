@@ -331,3 +331,21 @@ button {
     }
 
 }
+
+/* Permitir scroll horizontal en móviles */
+.headers-grid {
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-wrap: nowrap; /* que no se rompa a la siguiente línea */
+    justify-content: flex-start; /* alineado a la izquierda */
+}
+
+/* Opcional: mejorar la experiencia de scroll en iOS */
+.headers-grid {
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Para que las cards no se encojan demasiado */
+.headers-grid .card {
+    flex: 0 0 auto; 
+}
